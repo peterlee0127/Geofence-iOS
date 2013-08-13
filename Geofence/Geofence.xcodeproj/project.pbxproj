@@ -21,11 +21,9 @@
 		D00ABBC317A8AD1C00AC97FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00ABBC217A8AD1C00AC97FA /* MapKit.framework */; };
 		D00ABBC517A8AF4B00AC97FA /* regions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D00ABBC417A8AF4B00AC97FA /* regions.plist */; };
 		D00ABBC817A8AF5A00AC97FA /* 台北車站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D00ABBC717A8AF5A00AC97FA /* 台北車站.gpx */; };
-		D00ABBCA17A8AF7C00AC97FA /* Nexdoor.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D00ABBC917A8AF7C00AC97FA /* Nexdoor.gpx */; };
 		D013521017A8BBF10004082D /* 圓山站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D013520F17A8BBF10004082D /* 圓山站.gpx */; };
 		D013521117A8CC3A0004082D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00ABBC017A8ACEE00AC97FA /* CoreLocation.framework */; };
 		D05F858E17ABA53100420445 /* 捷運敦化站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D05F858D17ABA53100420445 /* 捷運敦化站.gpx */; };
-		D078CBD317AF2EB60086889C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D078CBD117AF2EB60086889C /* libTestFlight.a */; };
 		D078CBD517AF2F280086889C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D078CBD417AF2F280086889C /* libz.dylib */; };
 		D0799BA217AF44DA00165001 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0799BA117AF44DA00165001 /* QuartzCore.framework */; };
 		D0799BA517AF4B6C00165001 /* 捷運士林站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D0799BA317AF4B6B00165001 /* 捷運士林站.gpx */; };
@@ -59,12 +57,9 @@
 		D00ABBC217A8AD1C00AC97FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D00ABBC417A8AF4B00AC97FA /* regions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = regions.plist; sourceTree = "<group>"; };
 		D00ABBC717A8AF5A00AC97FA /* 台北車站.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "台北車站.gpx"; sourceTree = "<group>"; };
-		D00ABBC917A8AF7C00AC97FA /* Nexdoor.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Nexdoor.gpx; sourceTree = "<group>"; };
 		D013520F17A8BBF10004082D /* 圓山站.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "圓山站.gpx"; sourceTree = "<group>"; };
 		D05F858D17ABA53100420445 /* 捷運敦化站.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "捷運敦化站.gpx"; sourceTree = "<group>"; };
 		D060426317AF8B38003CFCA6 /* PlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistModel.h; sourceTree = "<group>"; };
-		D078CBD117AF2EB60086889C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		D078CBD217AF2EB60086889C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D078CBD417AF2F280086889C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D0799BA117AF44DA00165001 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0799BA317AF4B6B00165001 /* 捷運士林站.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "捷運士林站.gpx"; sourceTree = "<group>"; };
@@ -92,7 +87,6 @@
 				D00ABBA017A8ACE200AC97FA /* Foundation.framework in Frameworks */,
 				D00ABBA217A8ACE200AC97FA /* CoreGraphics.framework in Frameworks */,
 				D078CBD517AF2F280086889C /* libz.dylib in Frameworks */,
-				D078CBD317AF2EB60086889C /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,12 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				D00ABBC617A8AF5A00AC97FA /* GPX */,
-				D0F6051717AFB0BF00C27B2B /* Lib */,
+				D0A1B84F17BA379900F60DD8 /* View */,
 				D0F6051817AFB0FD00C27B2B /* Model */,
 				D060425E17AF5A5D003CFCA6 /* Layout */,
 				D00ABBB517A8ACE200AC97FA /* ViewController.h */,
 				D00ABBB617A8ACE200AC97FA /* ViewController.m */,
-				D00ABBB817A8ACE200AC97FA /* ViewController.xib */,
 				D00ABBAC17A8ACE200AC97FA /* AppDelegate.h */,
 				D00ABBAD17A8ACE200AC97FA /* AppDelegate.m */,
 				D0FE7E5417A903F30033966A /* button_my_location@2x.png */,
@@ -173,7 +166,6 @@
 				D00ABBC717A8AF5A00AC97FA /* 台北車站.gpx */,
 				D0F6051517AFAA7B00C27B2B /* 高雄.gpx */,
 				D0CC151A17A915B900D54864 /* 市政府.gpx */,
-				D00ABBC917A8AF7C00AC97FA /* Nexdoor.gpx */,
 				D013520F17A8BBF10004082D /* 圓山站.gpx */,
 			);
 			path = GPX;
@@ -190,13 +182,12 @@
 			name = Layout;
 			sourceTree = "<group>";
 		};
-		D0F6051717AFB0BF00C27B2B /* Lib */ = {
+		D0A1B84F17BA379900F60DD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D078CBD217AF2EB60086889C /* TestFlight.h */,
-				D078CBD117AF2EB60086889C /* libTestFlight.a */,
+				D00ABBB817A8ACE200AC97FA /* ViewController.xib */,
 			);
-			name = Lib;
+			name = View;
 			sourceTree = "<group>";
 		};
 		D0F6051817AFB0FD00C27B2B /* Model */ = {
@@ -266,7 +257,6 @@
 				D00ABBBA17A8ACE200AC97FA /* ViewController.xib in Resources */,
 				D00ABBC517A8AF4B00AC97FA /* regions.plist in Resources */,
 				D00ABBC817A8AF5A00AC97FA /* 台北車站.gpx in Resources */,
-				D00ABBCA17A8AF7C00AC97FA /* Nexdoor.gpx in Resources */,
 				D013521017A8BBF10004082D /* 圓山站.gpx in Resources */,
 				D0FE7E5517A903F30033966A /* button_my_location@2x.png in Resources */,
 				D05F858E17ABA53100420445 /* 捷運敦化站.gpx in Resources */,

@@ -32,8 +32,7 @@ NSArray *_regionArray;
     NSDictionary *thedata=[note userInfo];
     if(thedata!=nil)
     {
-        //        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Enter" message:[NSString stringWithFormat:@"%@",[thedata objectForKey:@"Enter"]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        //        [alert show];
+
     }
 }
 -(void) ExitOb:(NSNotification *) note
@@ -41,8 +40,7 @@ NSArray *_regionArray;
     NSDictionary *thedata=[note userInfo];
     if(thedata!=nil)
     {
-        //        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Exit" message:[NSString stringWithFormat:@"%@",[thedata objectForKey:@"Exit"]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        //        [alert show];
+
     }
 }
 
@@ -190,8 +188,8 @@ NSArray *_regionArray;
     CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
     
     CLLocationDistance regionRadius = [[dictionary valueForKey:@"radius"] doubleValue];
-   return [[CLRegion alloc] initCircularRegionWithCenter:centerCoordinate radius:regionRadius  identifier:title];   // Before iOS 7
-  //  return [[CLCircularRegion alloc] initWithCenter:centerCoordinate radius:regionRadius identifier:title]; //iOS 7 later
+   return [[CLRegion alloc] initCircularRegionWithCenter:centerCoordinate radius:regionRadius  identifier:title];
+ 
 }
 -(IBAction)toCurrentLocation:(id)sender
 {
@@ -261,27 +259,7 @@ NSArray *_regionArray;
     self.exittextView.text=[[NSString stringWithFormat:@"%@ %@\n",currentTime,[NSString stringWithFormat:@"離開區域:%@",region.identifier]] stringByAppendingString:self.exittextView.text];
 }
 
-//-(void) locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
-//{
-//    UILocalNotification *notification = [[UILocalNotification alloc] init];
-//    
-//
-//    if(state == CLRegionStateInside)
-//    {
-//        notification.alertBody = [NSString stringWithFormat:@"進入%@區域",region.identifier ];
-//    }
-//    else if(state == CLRegionStateOutside)
-//    {
-//          notification.alertBody = [NSString stringWithFormat:@"離開%@區域",region.identifier ];
-//    }
-//    else
-//    {
-//        return;
-//    }
-//    
-//    
-//    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-//}
+
 
 -(void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
@@ -291,7 +269,7 @@ NSArray *_regionArray;
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
 {
-   NSLog(@"開始montioring %@ 區域", region.identifier);
+   NSLog(@"Start montioring %@", region.identifier);
 
    self.entertextView.text=[[NSString stringWithFormat:@"%@\n",[NSString stringWithFormat:@"montioring %@ 區域",region.identifier]] stringByAppendingString:self.entertextView.text];
 }

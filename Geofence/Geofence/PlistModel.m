@@ -15,7 +15,7 @@
 - (void)writePlist:(BOOL) status
 {
     
-    //取得檔案路徑
+
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingString:@"/isGeofence.plist"];
@@ -23,7 +23,7 @@
     //
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSMutableDictionary *plistDict;
-    if ([fileManager fileExistsAtPath: filePath]) //檢查檔案是否存在
+    if ([fileManager fileExistsAtPath: filePath])
     {
         plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     }else{
@@ -37,7 +37,7 @@
     {
         [plistDict setValue:@"NO" forKey:@"isEnableGeoFence"];
     }
-    //存檔
+  
     if (![plistDict writeToFile:filePath atomically: YES])
     {
         NSLog(@"writePlist fail");
@@ -47,14 +47,14 @@
 }
 - (NSString *)readPlist
 {
-    //取得檔案路徑
+   
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingString:@"/isGeofence.plist"];
     //
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSMutableDictionary *plistDict;
-    if ([fileManager fileExistsAtPath: filePath]) //檢查檔案是否存在
+    if ([fileManager fileExistsAtPath: filePath])
     {
         plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     }
@@ -73,7 +73,7 @@
 - (void)writetest:(NSString *) message
 {
     
-    //取得檔案路徑
+ 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingString:@"/message.plist"];
@@ -81,7 +81,7 @@
     //
     NSFileManager *filemanager = [NSFileManager defaultManager];
     NSMutableDictionary *plistDict;
-    if ([filemanager fileExistsAtPath: filePath]) //檢查檔案是否存在
+    if ([filemanager fileExistsAtPath: filePath])
     {
         plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     }else{
@@ -90,8 +90,8 @@
     
     [plistDict setValue:message forKey:@"message"];
     
-    
-    //存檔
+
+  
     if (![plistDict writeToFile:filePath atomically: YES])
     {
         NSLog(@"writePlist fail");
