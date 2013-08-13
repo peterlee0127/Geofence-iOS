@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "CrumbPath.h"
-#import "CrumbPathView.h"
+
 #import "PlistModel.h"
 
 
@@ -26,8 +25,7 @@
 @property (nonatomic,strong) NSString *pushMessage;
 @property (nonatomic,strong) PlistModel *plistmodel;
 
-@property (nonatomic, strong) CrumbPath *crumbs;
-@property (nonatomic, strong) CrumbPathView *crumbView;
+
 
 
 @end

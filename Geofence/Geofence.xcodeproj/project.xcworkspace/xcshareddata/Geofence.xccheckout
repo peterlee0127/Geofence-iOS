@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3FDA5461-E5F4-445D-9BD8-16D6A4434AE6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Geofence</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E995DAFD-FB63-4D47-851D-089D8D807902</key>
+		<string>https://github.com/peterlee0127/Geofence.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Geofence/Geofence.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E995DAFD-FB63-4D47-851D-089D8D807902</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/peterlee0127/Geofence.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E995DAFD-FB63-4D47-851D-089D8D807902</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E995DAFD-FB63-4D47-851D-089D8D807902</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Geofence</string>
+		</dict>
+	</array>
+</dict>
+</plist>
