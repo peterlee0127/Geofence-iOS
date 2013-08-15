@@ -120,10 +120,9 @@ NSArray *_regionArray;
 
 - (void)initializeLocationManager
 {
-    // Check to ensure location services are enabled
     if(![CLLocationManager locationServicesEnabled])
     {
-        NSLog(@"%@",@"You need to enable location services to use this app.");
+        NSLog(@"%@",@"Need to enable location services to use this app.");
         return;
     }
     self.locationManager = [[CLLocationManager alloc] init];
@@ -164,7 +163,7 @@ NSArray *_regionArray;
     }
     return [NSArray arrayWithArray:geofences];
 }
-// - (CLCircularRegion *)mapDictionaryToRegion:(NSDictionary*)dictionary {
+
 - (CLRegion*)mapDictionaryToRegion:(NSDictionary*)dictionary {
     NSString *title = [dictionary valueForKey:@"title"];
     
