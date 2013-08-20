@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3FDA5461-E5F4-445D-9BD8-16D6A4434AE6</string>
+	<string>FEB7900A-946E-477B-9879-8DEF4638F6C2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Geofence</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E995DAFD-FB63-4D47-851D-089D8D807902</key>
-		<string>https://github.com/peterlee0127/Geofence.git</string>
+		<key>F27F601A-2F78-499A-A3E4-86CB256CB1E2</key>
+		<string>https://github.com/peterlee0127/Geofence-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Geofence/Geofence.xcodeproj/project.xcworkspace</string>
+	<string>Geofence.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E995DAFD-FB63-4D47-851D-089D8D807902</key>
-		<string>../../..</string>
+		<key>F27F601A-2F78-499A-A3E4-86CB256CB1E2</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/peterlee0127/Geofence.git</string>
+	<string>https://github.com/peterlee0127/Geofence-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E995DAFD-FB63-4D47-851D-089D8D807902</string>
+	<string>F27F601A-2F78-499A-A3E4-86CB256CB1E2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E995DAFD-FB63-4D47-851D-089D8D807902</string>
+			<string>F27F601A-2F78-499A-A3E4-86CB256CB1E2</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Geofence</string>
+			<string>Geofence-iOS</string>
 		</dict>
 	</array>
 </dict>

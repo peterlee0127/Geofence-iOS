@@ -30,7 +30,10 @@
 		D0799BA617AF4B6C00165001 /* 捷運石牌站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D0799BA417AF4B6B00165001 /* 捷運石牌站.gpx */; };
 		D07F2D0617B1F6AA00F4F74C /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D07F2D0517B1F6AA00F4F74C /* PlistModel.m */; };
 		D0F6050E17AFA8BA00C27B2B /* 捷運劍潭站.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D0F6050D17AFA8BA00C27B2B /* 捷運劍潭站.gpx */; };
+		D0F6051317AFA8FB00C27B2B /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F6051017AFA8FB00C27B2B /* CrumbPath.m */; };
+		D0F6051417AFA8FB00C27B2B /* CrumbPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F6051217AFA8FB00C27B2B /* CrumbPathView.m */; };
 		D0F6051617AFAA7B00C27B2B /* 高雄.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D0F6051517AFAA7B00C27B2B /* 高雄.gpx */; };
+		D0FE7E5517A903F30033966A /* button_my_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FE7E5417A903F30033966A /* button_my_location@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +67,12 @@
 		D07F2D0517B1F6AA00F4F74C /* PlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistModel.m; sourceTree = "<group>"; };
 		D0CC151A17A915B900D54864 /* 市政府.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "市政府.gpx"; sourceTree = "<group>"; };
 		D0F6050D17AFA8BA00C27B2B /* 捷運劍潭站.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "捷運劍潭站.gpx"; sourceTree = "<group>"; };
+		D0F6050F17AFA8FB00C27B2B /* CrumbPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrumbPath.h; path = GPX/CrumbPath.h; sourceTree = "<group>"; };
+		D0F6051017AFA8FB00C27B2B /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrumbPath.m; path = GPX/CrumbPath.m; sourceTree = "<group>"; };
+		D0F6051117AFA8FB00C27B2B /* CrumbPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrumbPathView.h; path = GPX/CrumbPathView.h; sourceTree = "<group>"; };
+		D0F6051217AFA8FB00C27B2B /* CrumbPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrumbPathView.m; path = GPX/CrumbPathView.m; sourceTree = "<group>"; };
 		D0F6051517AFAA7B00C27B2B /* 高雄.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "高雄.gpx"; sourceTree = "<group>"; };
+		D0FE7E5417A903F30033966A /* button_my_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_my_location@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +130,12 @@
 				D00ABBC617A8AF5A00AC97FA /* GPX */,
 				D0A1B84F17BA379900F60DD8 /* View */,
 				D0F6051817AFB0FD00C27B2B /* Model */,
+				D060425E17AF5A5D003CFCA6 /* Layout */,
 				D00ABBB517A8ACE200AC97FA /* ViewController.h */,
 				D00ABBB617A8ACE200AC97FA /* ViewController.m */,
 				D00ABBAC17A8ACE200AC97FA /* AppDelegate.h */,
 				D00ABBAD17A8ACE200AC97FA /* AppDelegate.m */,
+				D0FE7E5417A903F30033966A /* button_my_location@2x.png */,
 				D00ABBA417A8ACE200AC97FA /* Supporting Files */,
 			);
 			path = Geofence;
@@ -159,6 +169,17 @@
 				D013520F17A8BBF10004082D /* 圓山站.gpx */,
 			);
 			path = GPX;
+			sourceTree = "<group>";
+		};
+		D060425E17AF5A5D003CFCA6 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6050F17AFA8FB00C27B2B /* CrumbPath.h */,
+				D0F6051017AFA8FB00C27B2B /* CrumbPath.m */,
+				D0F6051117AFA8FB00C27B2B /* CrumbPathView.h */,
+				D0F6051217AFA8FB00C27B2B /* CrumbPathView.m */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 		D0A1B84F17BA379900F60DD8 /* View */ = {
@@ -206,6 +227,16 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Peterlee;
+				TargetAttributes = {
+					D00ABB9917A8ACE200AC97FA = {
+						DevelopmentTeam = AWP2538424;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = D00ABB9517A8ACE200AC97FA /* Build configuration list for PBXProject "Geofence" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -237,6 +268,7 @@
 				D00ABBC517A8AF4B00AC97FA /* regions.plist in Resources */,
 				D00ABBC817A8AF5A00AC97FA /* 台北車站.gpx in Resources */,
 				D013521017A8BBF10004082D /* 圓山站.gpx in Resources */,
+				D0FE7E5517A903F30033966A /* button_my_location@2x.png in Resources */,
 				D05F858E17ABA53100420445 /* 捷運敦化站.gpx in Resources */,
 				D0799BA517AF4B6C00165001 /* 捷運士林站.gpx in Resources */,
 				D0799BA617AF4B6C00165001 /* 捷運石牌站.gpx in Resources */,
@@ -255,6 +287,8 @@
 				D00ABBAA17A8ACE200AC97FA /* main.m in Sources */,
 				D00ABBAE17A8ACE200AC97FA /* AppDelegate.m in Sources */,
 				D00ABBB717A8ACE200AC97FA /* ViewController.m in Sources */,
+				D0F6051317AFA8FB00C27B2B /* CrumbPath.m in Sources */,
+				D0F6051417AFA8FB00C27B2B /* CrumbPathView.m in Sources */,
 				D07F2D0617B1F6AA00F4F74C /* PlistModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +374,8 @@
 		D00ABBBE17A8ACE200AC97FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: peter lee (BPD3W2W7W5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: peter lee (BPD3W2W7W5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geofence/Geofence-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -352,8 +386,8 @@
 					"\"$(SRCROOT)/Geofence\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7BE159B7-8BCD-4CE4-8F4B-95073B3A3806";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7BE159B7-8BCD-4CE4-8F4B-95073B3A3806";
+				PROVISIONING_PROFILE = "6E12791D-06D0-43B1-892D-4C75C156ED6E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6E12791D-06D0-43B1-892D-4C75C156ED6E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -361,8 +395,8 @@
 		D00ABBBF17A8ACE200AC97FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: peter lee (BPD3W2W7W5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: peter lee (BPD3W2W7W5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geofence/Geofence-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -373,7 +407,7 @@
 					"\"$(SRCROOT)/Geofence\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7BE159B7-8BCD-4CE4-8F4B-95073B3A3806";
+				PROVISIONING_PROFILE = "6E12791D-06D0-43B1-892D-4C75C156ED6E";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7BE159B7-8BCD-4CE4-8F4B-95073B3A3806";
 				WRAPPER_EXTENSION = app;
 			};

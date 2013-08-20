@@ -44,7 +44,6 @@ NSArray *_regionArray;
     }
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,7 +55,7 @@ NSArray *_regionArray;
 
     
     self.plistmodel=[[PlistModel alloc]init];
-
+    [self addRegionCircleLayout];
     [self initializeLocationManager];
     [self.locationManager startUpdatingLocation];
     [self initializeMap];
@@ -105,6 +104,21 @@ NSArray *_regionArray;
     }
 }
 
+-(void) addRegionCircleLayout
+{
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"regions" ofType:@"plist"];
+    _regionArray = [NSArray arrayWithContentsOfFile:plistPath];
+    for(NSDictionary *regionDict in _regionArray)
+    {    
+        CLRegion *region = [self mapDictionaryToRegion:regionDict];
+//        CLCircularRegion *region = [self mapDictionaryToRegion:regionDict];
+        // Draw Circle
+
+        CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(region.center.latitude,region.center.longitude);
+        MKCircle *circle = [MKCircle circleWithCenterCoordinate:centerCoordinate radius:region.radius];
+        [self.mapView addOverlay:circle];
+    }
+}
 
 
 - (void)initializeMap
@@ -122,7 +136,7 @@ NSArray *_regionArray;
 {
     if(![CLLocationManager locationServicesEnabled])
     {
-        NSLog(@"%@",@"Need to enable location services to use this app.");
+        NSLog(@"%@",@"You need to enable location services to use this app.");
         return;
     }
     self.locationManager = [[CLLocationManager alloc] init];
@@ -163,7 +177,7 @@ NSArray *_regionArray;
     }
     return [NSArray arrayWithArray:geofences];
 }
-
+// - (CLCircularRegion *)mapDictionaryToRegion:(NSDictionary*)dictionary {
 - (CLRegion*)mapDictionaryToRegion:(NSDictionary*)dictionary {
     NSString *title = [dictionary valueForKey:@"title"];
     
@@ -281,6 +295,25 @@ NSArray *_regionArray;
 
 #pragma mark - MKMapView Delegate
 
+- (MKOverlayView *)mapView:(MKMapView *)map viewForOverlay:(id <MKOverlay>)overlay
+{
+    if([overlay isKindOfClass:[MKCircle class]])
+    {
+        MKCircleView *circleView = [[MKCircleView alloc] initWithOverlay:overlay];
+        circleView.strokeColor = [UIColor redColor];
+        circleView.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.2];
+        return circleView;
+    }
+    else
+    {
+    if (!self.crumbView)
+    {
+            _crumbView = [[CrumbPathView alloc] initWithOverlay:overlay];
+    }
+        return self.crumbView;
+    }
+
+}
 
 
 #pragma mark -  Http post 
@@ -326,7 +359,44 @@ NSArray *_regionArray;
     CLLocation *location=[locations lastObject];
     self.coordinateLabel.text = [NSString stringWithFormat:@"%f,%f",location.coordinate.latitude,location.coordinate.longitude];
     
-   
+    if (!self.crumbs)
+    {
+        // This is the first time we're getting a location update, so create
+        // the CrumbPath and add it to the map.
+        //
+        _crumbs = [[CrumbPath alloc] initWithCenterCoordinate:location.coordinate];
+        [self.mapView addOverlay:self.crumbs];
+        
+        // On the first location update only, zoom map to user location
+        MKCoordinateRegion region =
+        MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500);
+        [self.mapView setRegion:region animated:YES];
+    }
+    else
+    {
+        // This is a subsequent location update.
+        // If the crumbs MKOverlay model object determines that the current location has moved
+        // far enough from the previous location, use the returned updateRect to redraw just
+        // the changed area.
+        //
+        // note: iPhone 3G will locate you using the triangulation of the cell towers.
+        // so you may experience spikes in location data (in small time intervals)
+        // due to 3G tower triangulation.
+        //
+        MKMapRect updateRect = [self.crumbs addCoordinate:location.coordinate];
+        
+        if (!MKMapRectIsNull(updateRect))
+        {
+            // There is a non null update rect.
+            // Compute the currently visible map zoom scale
+            MKZoomScale currentZoomScale = (CGFloat)(self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width);
+            // Find out the line width at this zoom scale and outset the updateRect by that amount
+            CGFloat lineWidth = MKRoadWidthAtZoomScale(currentZoomScale);
+            updateRect = MKMapRectInset(updateRect, -lineWidth, -lineWidth);
+            // Ask the overlay view to update just the changed area.
+            [self.crumbView setNeedsDisplayInMapRect:updateRect];
+        }
+    }
 
 }
 @end

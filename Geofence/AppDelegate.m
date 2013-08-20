@@ -10,10 +10,14 @@
 
 #import "ViewController.h"
 
+
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+//   [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -34,38 +38,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
-//    UIApplication *app = [UIApplication sharedApplication];
-//    __block UIBackgroundTaskIdentifier bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            if (bgTask != UIBackgroundTaskInvalid) {
-//                [app endBackgroundTask:bgTask];
-//                bgTask = UIBackgroundTaskInvalid;
-//            }
-//        });
-//    }];
-//    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        
-//           NSTimer *testTimer = [NSTimer scheduledTimerWithTimeInterval:(1) target:self selector:@selector(doSomeTest) userInfo:nil repeats:YES];
-//        [testTimer fire];
-//        [[NSRunLoop currentRunLoop] addTimer:testTimer forMode:NSRunLoopCommonModes];
-//        
-//        [[NSRunLoop currentRunLoop] run];
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            if (bgTask != UIBackgroundTaskInvalid) {
-//                [app endBackgroundTask:bgTask];
-//                bgTask = UIBackgroundTaskInvalid;
-//            }
-//        });
-//    });
-}
--(void) doSomeTest
-{
-    NSLog(@"test");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -86,8 +59,12 @@
 - (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {
     // Handle the notificaton when the app is running
    // NSLog(@"Recieved Notification %@",notif);
-    
 }
+//-(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+//    
+//    NSLog(@"fetch");
+//    
+//   }
 
 
 @end
