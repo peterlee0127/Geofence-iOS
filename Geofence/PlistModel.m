@@ -78,7 +78,6 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingString:@"/message.plist"];
     
-    //
     NSFileManager *filemanager = [NSFileManager defaultManager];
     NSMutableDictionary *plistDict;
     if ([filemanager fileExistsAtPath: filePath])

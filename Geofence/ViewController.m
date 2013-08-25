@@ -374,15 +374,6 @@ NSArray *_regionArray;
     }
     else
     {
-        // This is a subsequent location update.
-        // If the crumbs MKOverlay model object determines that the current location has moved
-        // far enough from the previous location, use the returned updateRect to redraw just
-        // the changed area.
-        //
-        // note: iPhone 3G will locate you using the triangulation of the cell towers.
-        // so you may experience spikes in location data (in small time intervals)
-        // due to 3G tower triangulation.
-        //
         MKMapRect updateRect = [self.crumbs addCoordinate:location.coordinate];
         
         if (!MKMapRectIsNull(updateRect))
