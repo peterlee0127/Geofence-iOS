@@ -135,7 +135,6 @@
 				D00ABBB617A8ACE200AC97FA /* ViewController.m */,
 				D00ABBAC17A8ACE200AC97FA /* AppDelegate.h */,
 				D00ABBAD17A8ACE200AC97FA /* AppDelegate.m */,
-				D0FE7E5417A903F30033966A /* button_my_location@2x.png */,
 				D00ABBA417A8ACE200AC97FA /* Supporting Files */,
 			);
 			path = Geofence;
@@ -144,6 +143,7 @@
 		D00ABBA417A8ACE200AC97FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE7E5417A903F30033966A /* button_my_location@2x.png */,
 				D00ABBC417A8AF4B00AC97FA /* regions.plist */,
 				D00ABBA517A8ACE200AC97FA /* Geofence-Info.plist */,
 				D00ABBA617A8ACE200AC97FA /* InfoPlist.strings */,

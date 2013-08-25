@@ -174,16 +174,6 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Nexdoor</string>
-		<key>latitude</key>
-		<real>25.03875</real>
-		<key>longitude</key>
-		<real>121.550542</real>
-		<key>radius</key>
-		<integer>100</integer>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>台北車站</string>
 		<key>latitude</key>
 		<real>25.046177</real>
