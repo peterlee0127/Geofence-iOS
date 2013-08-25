@@ -177,7 +177,7 @@ NSArray *_regionArray;
     }
     return [NSArray arrayWithArray:geofences];
 }
-// - (CLCircularRegion *)mapDictionaryToRegion:(NSDictionary*)dictionary {
+
 - (CLRegion*)mapDictionaryToRegion:(NSDictionary*)dictionary {
     NSString *title = [dictionary valueForKey:@"title"];
     
