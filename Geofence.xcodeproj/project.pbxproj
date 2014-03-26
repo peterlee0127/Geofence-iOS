@@ -389,8 +389,8 @@
 					"\"$(SRCROOT)/Geofence\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ECF30E50-DA84-41A6-B98A-E6F8E3DF50CE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ECF30E50-DA84-41A6-B98A-E6F8E3DF50CE";
+				PROVISIONING_PROFILE = "03CFF426-D65D-41C3-8AC2-1F47A8E83758";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "03CFF426-D65D-41C3-8AC2-1F47A8E83758";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,7 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: peter lee (BPD3W2W7W5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geofence/Geofence-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
