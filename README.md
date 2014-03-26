@@ -14,6 +14,12 @@ work in App Open,Background,Closed
 
 in iOS 7 , only work in App  Open,Background
 
+---
+<h2>Update:</h2>
+iOS 7.1 
+can monitoring in app closed.  
+work in App Open,Background,Closed
+
 ------
 Test location is in GPX folder
 

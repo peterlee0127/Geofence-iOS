@@ -234,6 +234,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.iOS = {
+								enabled = 0;
+							};
 						};
 					};
 				};
@@ -340,7 +343,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -364,7 +367,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -380,14 +383,14 @@
 				GCC_PREFIX_HEADER = "Geofence/Geofence-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Geofence/Geofence-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Geofence\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6E12791D-06D0-43B1-892D-4C75C156ED6E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6E12791D-06D0-43B1-892D-4C75C156ED6E";
+				PROVISIONING_PROFILE = "ECF30E50-DA84-41A6-B98A-E6F8E3DF50CE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ECF30E50-DA84-41A6-B98A-E6F8E3DF50CE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,13 +404,13 @@
 				GCC_PREFIX_HEADER = "Geofence/Geofence-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Geofence/Geofence-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Geofence\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6E12791D-06D0-43B1-892D-4C75C156ED6E";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7BE159B7-8BCD-4CE4-8F4B-95073B3A3806";
 				WRAPPER_EXTENSION = app;
 			};
